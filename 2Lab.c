@@ -2,14 +2,14 @@
 #include<string.h>
 int main()
 {
-    printf("Adarsh's(1AY23CS008) program!\n");
-    char parent[]="AABCABCAABAB";
-    char pattern[]="AABA";
-    char new[]="ADAR";
+   // printf("Adarsh's(1AY23CS008) program!\n");
+    char parent[]="TANISHKA";
+    char pattern[]="KA";
+    char replace[]="KO";  
     int m=strlen(parent);
     int n=strlen(pattern);
     int j=0,k=0;
-    for(int i=0;i<m-n;i++)
+    for(int i=0;i<=m-n;i++)
     {
        for(j=0;j<n;j++)
        {
@@ -23,11 +23,11 @@ int main()
         printf("Pattern found at %d\n",i+1);
         for(int j=0;j<n;j++)
         {
-            parent[i+j]=new[j];
+            parent[i+j]=replace[j];
         }
        }
     
     }
-    printf(parent);
+    printf("%s",parent);
     return 0;
 }

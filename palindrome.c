@@ -1,21 +1,27 @@
 #include<stdio.h>
-void check_pal()
+int checkPal(int num)
 {
-    int num=0,digit,revnum=0,k=0;
-   // if(top==-1)
-    //printf("Stack is empty");
-    //return;
-    while(top!=-1)
+    int original,rev=0,rem;
+    original=num;
+    while(num!=0)
     {
-        pop();
-        num=num*10+item;
-        revnum=item*pow(10,k)+revnum;
-        k++;
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
     }
-    printf("\nReverse number of %d is:%d",num,revnum);
-    if(num==revnum)
-    printf("This stack contains a palindrome.");
+    return original==rev;
+}
+int main()
+{
+    int number;
+    printf("Enter a number:");
+    scanf("%d",&number);
+    if(checkPal(number))
+    {
+        printf("The given no %d is a palindrome.\n",number);
+    }
     else{
-        printf("\nThis stack does not contains palindrome.");
+        printf("The given number %d is not a palindrome.\n",number);
     }
+    return 0;
 }
