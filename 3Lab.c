@@ -31,24 +31,25 @@ void display()
 {
     int i;
     printf("The elements of stack is:\n");
-    for(i=top;i>=0;i--)
+    for(i=0;i<=top;i++)
     
         printf("\n%d",stack[i]);    
 }
 void check_pal() {
-    int i = 0;
-    int j = top;
-    int is_palindrome = 1;
-    while(i < j) {
-        if(stack[i] != stack[j]) {
-            is_palindrome = 0;
-            break;
-        }
-        i++;
-        j--;
+    int num=0,revnum=0,k=0;
+    if(top==-1)
+    {
+        printf("The stack is empty\n");
     }
+    while(top!=-1)
+    {
+        pop();
+        num=num*10+item;
+        revnum=item*pow(10,k)+revnum;
+        k=k+1;
+    } 
 
-    if(is_palindrome) {
+    if(num==revnum) {
         printf("This stack contains a palindrome.");
     } else {
         printf("This stack does not contain a palindrome.");
@@ -96,6 +97,6 @@ void main()
         default:printf("\nInvalid choice\n");
             
         }
-    } while (ch!=5);
+    } while (1);
     
 }

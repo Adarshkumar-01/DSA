@@ -8,7 +8,7 @@ int main()
     char replace[]="KO";  
     int m=strlen(parent);
     int n=strlen(pattern);
-    int j=0,k=0;
+    int j=0;
     for(int i=0;i<=m-n;i++)
     {
        for(j=0;j<n;j++)
