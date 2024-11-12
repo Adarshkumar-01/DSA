@@ -3,12 +3,12 @@ void towerofhanoi(int n,char A,char B,char C)
 {
     if(n==1)
     {
-        printf("\nMove disc from %c to %c",A,C);
+        printf("\nMove disc 1 from %c to %c",A,C);
     }
     else{
-        towerofhanoi(n-1,'A','C','B');
+        towerofhanoi(n-1,A,C,B);
         printf("\nMove disc %d from %c to %c", n, A, C);
-        towerofhanoi(n-1,'B','A','C');
+        towerofhanoi(n-1,B,A,C);
 }
 }
 int main()

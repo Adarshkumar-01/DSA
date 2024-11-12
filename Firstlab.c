@@ -51,7 +51,7 @@ int main(){
     }
     read(calender, size);
     display(calender, size);
-    freeMemory(calender, size); 
-    free(calender);
+   // freeMemory(calender, size); 
+    //free(calender);
     return 0;
 }
